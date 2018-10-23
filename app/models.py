@@ -58,9 +58,9 @@ class Post(db.Model):
     posted = db.Column(db.DateTime,default=datetime.utcnow)
 
 
-#     def save_post(self):
-#         db.session.add(self)
-#         db.session.commit()
+    def save_post(self):
+        db.session.add(self)
+        db.session.commit()
 
 #     @classmethod
 #     def get_posts(cls,id):
