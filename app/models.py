@@ -80,9 +80,9 @@ class Comment(db.Model):
         db.session.add(self)
         db.session.commit()
 
-#     def delete_comment(self):
-#         db.session.delete(self)
-#         db.session.commit()
+    def delete_comment(self):
+        db.session.delete(self)
+        db.session.commit()
 
 
 # class Role(db.Model):
