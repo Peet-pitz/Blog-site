@@ -26,28 +26,28 @@ def index():
     title = "Welcome to My Blog"
     return render_template('index.html',title=title,posts=posts,subscriber_form=form)
 
-# @main.route("/new_post",methods=['GET','POST'])
-# @login_required
-# def new_post():
-#     form = PostForm()
-#     if form.validate_on_submit():
-#         title = form.title.data
-#         post = form.post.data
-#         category = form.category.data
-#         like=0
-#         new_post=Post(title=title,post=post,category=category,like=like)
+@main.route("/new_post",methods=['GET','POST'])
+@login_required
+def new_post():
+    form = PostForm()
+    if form.validate_on_submit():
+        title = form.title.data
+        post = form.post.data
+        category = form.category.data
+        like=0
+        new_post=Post(title=title,post=post,category=category,like=like)
 
-#         new_post.save_post()
+        new_post.save_post()
 
-#         subscribers=Subscriber.query.all()
+        subscribers=Subscriber.query.all()
 
-#         for subscriber in subscribers:
-#             mail_message("New Blog Post","email/new_post",subscriber.email,post=new_post)
+        for subscriber in subscribers:
+            mail_message("New Blog Post","email/new_post",subscriber.email,post=new_post)
 
-#         return redirect(url_for('main.index'))
+        return redirect(url_for('main.index'))
 
-#     title="New post"
-#     return render_template('new_post.html',title=title,post_form=form)
+    title="New post"
+    return render_template('new_post.html',title=title,post_form=form)
 
 # @main.route("/post/<int:id>",methods=['GET','POST'])
 # def post(id):
