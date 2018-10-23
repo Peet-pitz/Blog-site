@@ -74,22 +74,22 @@ def post(id):
     return render_template('post.html',post=post,comments=comment,comment_form=form)
 
     
-# @main.route("/life",methods=['GET','POST'])
-# def life():
-#     """
-#     View root page function that returns the index page and its data
-#     """
-#     posts = Post.query.filter_by(category="Life").all()
-#     form = SubscriberForm()
-#     if form.validate_on_submit():
-#         email = form.email.data
+@main.route("/life",methods=['GET','POST'])
+def life():
+    """
+    View root page function that returns the index page and its data
+    """
+    posts = Post.query.filter_by(category="Life").all()
+    form = SubscriberForm()
+    if form.validate_on_submit():
+        email = form.email.data
 
-#         new_subscriber=Subscriber(email=email)
-#         new_subscriber.save_subscriber()
+        new_subscriber=Subscriber(email=email)
+        new_subscriber.save_subscriber()
 
-#         mail_message("Subscription Received","email/welcome_subscriber",new_subscriber.email,subscriber=new_subscriber)
+        mail_message("Subscription Received","email/welcome_subscriber",new_subscriber.email,subscriber=new_subscriber)
 
-#     title = "Welcome"
-#     return render_template('life.html',title=title,posts=posts,subscriber_form=form)
+    title = "Welcome"
+    return render_template('life.html',title=title,posts=posts,subscriber_form=form)
 
 
