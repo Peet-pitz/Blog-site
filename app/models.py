@@ -76,9 +76,9 @@ class Comment(db.Model):
     post_id = db.Column(db.Integer,db.ForeignKey("posts.id"))
     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
 
-#     def save_comment(self):
-#         db.session.add(self)
-#         db.session.commit()
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
 
 #     def delete_comment(self):
 #         db.session.delete(self)
