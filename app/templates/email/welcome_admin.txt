@@ -1,0 +1,10 @@
+Hello {{user.username}}
+Welcome!
+You have just been registered as an admin for the website and have access to the following features:
+* Adding Posts
+* Deleting Posts
+* Deleting Comments
+* Adding Admins
+
+Regards,
+Peter 
