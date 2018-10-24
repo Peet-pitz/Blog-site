@@ -26,7 +26,7 @@ peter njoroge
 It fails to send notification emails.
 ***
 # Link to Live website
-https://blog047.herokuapp.com/
+https://my-blog047.herokuapp.com/
 # Copyright and License Information
   This project is licensed under the terms of the **MIT** license.
    
