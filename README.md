@@ -23,7 +23,7 @@ peter njoroge
 
 ***
 # Known Bugs
-None for now.
+It fails to send notification emails.
 ***
 # Link to Live website
 https://blog047.herokuapp.com/
